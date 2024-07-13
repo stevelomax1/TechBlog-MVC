@@ -1,0 +1,10 @@
+{
+    "development": {
+      "username": "your_mysql_username",
+      "password": "your_mysql_password",
+      "database": "cms_blog_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
+  
