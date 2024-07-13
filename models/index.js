@@ -1,27 +1,19 @@
-const User = require('./user');
-const Post = require('./post');
-const Comment = require('./comment');
+const Sequelize = require('sequelize');
+const dotenv = require('dotenv');
 
-User.hasMany(Post, {
-  foreignKey: 'user_id'
-});
+dotenv.config();
 
-Post.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: '127.0.0.1',
+    dialect: 'mysql'
+  }
+);
 
-Post.hasMany(Comment, {
-  foreignKey: 'post_id'
-});
+module.exports = sequelize;
 
-Comment.belongsTo(User, {
-  foreignKey: 'user_id'
-});
-
-Comment.belongsTo(Post, {
-  foreignKey: 'post_id'
-});
-
-module.exports = { User, Post, Comment, sequelize };
 
 
