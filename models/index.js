@@ -1,19 +1,26 @@
-const Sequelize = require('sequelize');
-const dotenv = require('dotenv');
+const User = require('./user');
+const Post = require('./post');
+const Comment = require('./comment');
 
-dotenv.config();
+Post.belongsTo(User, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
+});
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: '127.0.0.1',
-    dialect: 'mysql'
-  }
-);
+Post.hasMany(Comment, {
+  foreignKey: 'postId',
+  onDelete: 'CASCADE',
+});
 
-module.exports = sequelize;
+Comment.belongsTo(User, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
+});
 
+module.exports = {
+  User,
+  Post,
+  Comment,
+};
 
 
