@@ -1,8 +1,31 @@
-<form id="login-form">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <button type="submit">Login</button>
-</form>
-<script src="/js/login.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="box-container">
+        <div class="login-card">
+            <div class="head-block">
+                <h2>Login</h2>
+            </div>
+            <form id="login-box">
+                <div>
+                    <label for="user-input-info" class="userform-label">Username</label>
+                    <input type="text" id="user-input-info" name="username" placeholder="USER EMAIL" required>
+                </div>
+                <div>
+                    <label for="password-input-info" class="userform-label">Password</label>
+                    <input type="password" id="password-input-info" name="password" placeholder="PASSWORD" required>
+                </div>
+                <button type="submit" id="login-button" class="btn">Login!</button>
+                <a type="button" href="/signup">Click here to signup if new!</a>
+            </form>
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,19 +1,22 @@
-<header>
-  <h1>Blog CMS</h1>
-  {{#if logged_in}}
-    <a href="/dashboard">Dashboard</a>
-    <a href="/logout">Logout</a>
-  {{else}}
-    <a href="/login">Login</a>
-    <a href="/signup">Signup</a>
-  {{/if}}
-</header>
-<main>
+<div class="posts">
   {{#each posts}}
-    <article>
-      <h2>{{title}}</h2>
-      <p>{{content}}</p>
-      <small>By {{user.username}} on {{createdAt}}</small>
-    </article>
+  <div class="cardC">
+
+    <div class="head-block alignment">
+      <h3>
+        <a href="/post/{{id}}">
+          {{title}}
+        </a>
+      </h3>
+
+      <div>
+
+        Created by: {{user.username}} {{formatDate createdAt}}
+      </div>
+    </div>
+    <div class="cardC-body">
+      {{body}}
+    </div>
+  </div>
   {{/each}}
-</main>
+</div>

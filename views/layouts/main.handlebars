@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechBlog</title>
   <link rel="stylesheet" href="/css/style.css">
-  <title>Blog CMS</title>
 </head>
-<body>
-  {{{body}}}
+
+<body class="flex-columns min-101-vh">
+  <nav class="navsection">
+    <ul class="flex-rows">
+      <li class="line-adjustify nav-links"><a href="/">Comments</a></li>
+      <li class="line-adjustify nav-links"><a href="/dashboard">MyDashboard</a></li>
+      {{#if loggedIn}}
+      <li class="line-adjustify nav-links"><a href="#" id="logout">Logout</a></li>
+      {{else}}
+      <li class="line-adjustify nav-links"><a href="/login">Login</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+  
+  <header class="links">
+    <h1 class="blog-title"><a href="{{#if dashboard}}/dashboard{{else}}/{{/if}}">
+      {{#if dashboard}}My Dashboard{{else}}TechBlog{/if}}
+    </a></h1>
+  </header>
+
+  <main class="col-auto">
+    {{{body}}}
+  </main>
+
+  <footer class="footpage flex-rows justify-center">
+    {{#if dashboard}}
+    <a href="/dashboard/new">😀 Add Post</a>
+    {{else}}
+    &copy; TechBlog Company
+    {{/if}}
+  </footer>
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
+
 </html>

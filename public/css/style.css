@@ -1,0 +1,555 @@
+:root {
+    --primary: grey;
+    --secondary: white;
+    --tertiary: maroon;
+    --light-dark: black;
+    --dark: black;
+    --border-radius: 0.3rem;
+  }
+  
+  body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family: "sans-serif", sans-serif;
+    color: var(--dark);
+    line-height: 2.5;
+    font-size: 15px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { /*to format text in the H tags*/
+    font-weight: 650;
+    margin: 0;
+    color: var(--dark);
+    line-height: 1.20;
+  }
+  
+  header {
+    margin-top: 55px;
+  }
+  
+  main {
+    margin: 21px auto;
+    width: 97%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  input {
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #FFF;
+      margin: 0 0 2px;
+      padding: 15px;
+  }
+  
+  .head-block h3 {
+    color: var(--primary);
+  }
+  
+  
+  .list-group {
+    padding: 1%;
+  }
+  
+  .box-container { /*login and signup form*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-box-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 2em auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  form input, form textarea {
+    width: 90%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  form button {
+    width: 90%;
+    padding: 0.5em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-card {
+    margin: 4px 0 40px 0; /* Top, right, bottom, left margins */
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    width: calc(70% + 20px); /* Increase width by 20px */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  .signup-card {/*format login*/
+    margin: 4px 0 40px 0; /* Top, right, bottom, left margins */
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    width: calc(70% + 20px); /* Increase width by 20px */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  .navsection { /*navbar formatting top*/
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    border: 3px solid #333; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .blog-title {
+    font-size:4em;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 0 10px;
+    display: block; /* Change to block */
+    width: max-content; /* Adjustify width to fit content */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: var(--border-radius);
+    outline: 6px solid white;
+    outline-offset: 5px; /* Adjustify offset to move the outline */
+    background-image: linear-gradient(145deg, white 50%, transparent 50%);
+  }
+  
+  .blog-title a {
+    color: var(--dark);
+  }
+  
+  .links {
+    padding: 3% 4%;
+    background-color: var(--dark);
+    color: var(--primary);
+  }
+  
+  .links p {
+    max-width: 75%;
+  }
+  
+  .line-adjustify {
+    display: inline;
+  }
+  
+  
+  .nav-links {
+    margin: auto;
+    
+  }
+  
+  .nav-links a {
+    color: var(--primary);
+  }
+  
+  .head-block { /*change columns*/
+    color: white;
+    background-color: black;
+    padding: 2%;
+    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .cardA { /*add comment card*/
+    margin: 2 0 50px 0;
+    border: 7px solid black;
+    border-radius: var(--border-radius);
+  }
+  
+  .cardA-body {
+    padding: 2%;
+  }
+  
+  .cardB { /*format card above the 'add comment'*/
+    margin: 0 0 300px 0;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+  }
+  
+  .cardB-body {
+    padding: 2%;
+  }
+  
+  .cardC {
+    margin: 0 0 20px 0;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+  }
+  
+  .cardC-body {
+    padding: 1%;
+  }
+  
+  .my-db-items {/*format columns on my dashboard*/
+    margin-bottom: 8px;
+    padding: 2%;
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+    color: black;
+    text-decoration: none;
+  }
+  
+  .my-db-items:hover {
+    background-color: var(--dark);
+  }
+  
+  .min-101-vh {
+    min-height: 101vh;
+  } /*height*/
+  
+  .min-101-vw {
+    min-width: 101vw;
+  } /*width*/
+  
+  .text-uppercase { /*adjust objects*/
+    text-transform: uppercase;
+  }
+  
+  .flex-rows {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .justify-space-around {
+    justify-content: space-around;
+  }
+  
+  .justify-flex-start {
+    justify-content: flex-start;
+  }
+  
+  .justify-flex-end {
+    justify-content: flex-end;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .align-stretch {
+    align-items: stretch;
+  }
+  
+  .align-end {
+    align-items: flex-end;
+  }
+  
+  .align-center {
+    align-items: center;
+  }
+  
+  .footpage a { /*footer*/
+    display: inline-block;
+    padding: 2em;
+    margin-bottom: .6em;
+    background-color: var(--dark);
+    color: var(--primary);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+  }
+  
+  .cols-auto { /*when I shrink screen to be able to see everything like I am on a mobile phone */
+    flex-grow: 1;
+  }
+  
+  .cols-A {
+    flex: 0 0 calc(100% * 1 / 12 - 2%);
+  }
+  
+  .cols-B {
+    flex: 0 0 calc(100% * 2 / 12 - 2%);
+  }
+  
+  .cols-C {
+    flex: 0 0 calc(100% * 3 / 12 - 2%);
+  }
+  
+  .cols-D {
+    flex: 0 0 calc(100% * 4 / 12 - 2%);
+  }
+  
+  .cols-E {
+    flex: 0 0 calc(100% * 5 / 12 - 2%);
+  }
+  
+  .cols-F {
+    flex: 0 0 calc(100% * 6 / 12 - 2%);
+  }
+  
+  .cols-G {
+    flex: 0 0 calc(100% * 7 / 12 - 2%);
+  }
+  
+  .cols-H {
+    flex: 0 0 calc(100% * 8 / 12 - 2%);
+  }
+  
+  .cols-I {
+    flex: 0 0 calc(100% * 9 / 12 - 2%);
+  }
+  
+  .cols-J {
+    flex: 0 0 calc(100% * 10 / 12 - 2%);
+  }
+  
+  .cols-K {
+    flex: 0 0 calc(100% * 11 / 12 - 2%);
+  }
+  
+  .cols-L {
+    flex: 0 0 100%;
+  }
+  
+  @media screen and (min-width: 640px) {
+    .cols-sm-A {
+      flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+  
+    .cols-sm-B {
+      flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+  
+    .cols-sm-C {
+      flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+  
+    .cols-sm-D {
+      flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+  
+    .cols-sm-E {
+      flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+  
+    .cols-sm-F {
+      flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+  
+    .cols-sm-G {
+      flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+  
+    .cols-sm-H {
+      flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+  
+    .cols-sm-I {
+      flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+  
+    .cols-sm-J {
+      flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+  
+    .cols-sm-K {
+      flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+  
+    .cols-sm-L {
+      flex: 0 0 100%;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .cols-md-A {
+      flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+  
+    .cols-md-B {
+      flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+  
+    .cols-md-C {
+      flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+  
+    .cols-md-D {
+      flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+  
+    .cols-md-E {
+      flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+  
+    .cols-md-F {
+      flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+  
+    .cols-md-G {
+      flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+  
+    .cols-md-H {
+      flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+  
+    .cols-md-I {
+      flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+  
+    .cols-md-J {
+      flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+  
+    .cols-md-K {
+      flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+  
+    .cols-md-L {
+      flex: 0 0 100%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .cols-lg-1 {
+      flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+  
+    .cols-lg-2 {
+      flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+  
+    .cols-lg-3 {
+      flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+  
+    .cols-lg-4 {
+      flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+  
+    .cols-lg-5 {
+      flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+  
+    .cols-lg-6 {
+      flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+  
+    .cols-lg-7 {
+      flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+  
+    .cols-lg-8 {
+      flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+  
+    .cols-lg-9 {
+      flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+  
+    .cols-lg-10 {
+      flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+  
+    .cols-lg-11 {
+      flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+  
+    .cols-lg-12 {
+      flex: 0 0 100%;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .cols-xl-A {
+      flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+  
+    .cols-xl-B {
+      flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+  
+    .cols-xl-C {
+      flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+  
+    .cols-xl-D {
+      flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+  
+    .cols-xl-E {
+      flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+  
+    .cols-xl-F {
+      flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+  
+    .cols-xl-G {
+      flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+  
+    .cols-xl-H {
+      flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+  
+    .cols-xl-I {
+      flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+  
+    .cols-xl-J {
+      flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+  
+    .cols-xl-K {
+      flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+  
+    .cols-xl-L {
+      flex: 0 0 100%;
+    }
+  }
