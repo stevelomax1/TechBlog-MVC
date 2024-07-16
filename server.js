@@ -18,7 +18,7 @@ const sess = { /*cookies*/
     maxAge: 300000,
     httpOnly: true,
     secure: false,
-    sameSite: 'strict',
+    
   },
   resave: false,
   saveUninitialized: true,
